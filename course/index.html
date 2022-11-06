@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="-al-scale=1.0">
+    <link rel="stylesheet" href="../styles/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <script src="../js/bootstrap.min.js"></script>
+    <title>Professor Allocation</title>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+              <a class="navbar-brand" href="/professor%3Dallocation//index.html">Professor Allocation</a>
+              <button 
+                class="navbar-toggler" 
+                type="button" 
+            >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a 
+                      class="nav-link"   
+                      href="/professor%3Dallocation/index.html">Home</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a 
+                      class="nav-link" 
+                      href="/professor%3Dallocation/professor/index.html">Professor</a>
+                  </li>
+                  <li class="nav-item">
+                    <a 
+                      class="nav-link active" 
+                      aria-current="page" 
+                      href="/professor%3Dallocation/course/index.html">Courses</a>
+                  </li>
+                  <li class="nav-item">
+                    <a 
+                      class="nav-link" 
+                      href="/professor%3Dallocation/department/index.html" >Departments</a>
+                  </li>
+                </ul>
+             </div>
+            </div>
+          </nav>
+    </header>
+
+    <main class="container mt-4">
+      <div class="card">
+        <div class="card-header">Course</div>
+        <div class="card-body">
+          <div class="mb-3">
+            <button 
+              type="button" 
+              class="btn btn-primary" 
+              data-bs-toggle="modal" 
+              data-bs-target="#exampleModal">
+              Create course
+            </button>
+          </div>
+          <table class="table table-hover ">
+            <thead>
+              <tr class="table-secondary">
+                <th >ID</th>
+                <th >Name</th>
+                <th >Actions</th>
+              </tr>
+            </thead>
+            <tbody id="table-body" class="table-group-divider">
+              
+            </tbody>
+          </table>
+
+          <!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new course</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <form</form>
+      <div class="modal-body">
+          <div class="mb-3">
+            <label 
+              for="name" 
+              class="form-label">Name
+            </label>
+            <input 
+              required
+              type="text" 
+              class="form-control" 
+              id="name" >
+          </div>
+
+          <div class="modal-footer">
+            <button 
+              type="button" 
+              class="btn btn-secondary" 
+              data-bs-dismiss="modal">
+              Close
+            </button>
+            <button  
+              class="btn btn-primary" 
+              type="submit" 
+              onclick="createCourse(event)">
+              Save changes
+            </button>
+          </div>
+
+        </form>
+
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+          
+
+        </div>
+      </div>
+
+      
+
+    </main>
+    <script src="index.js"></script>
+</body>
+</html> 

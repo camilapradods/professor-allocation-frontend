@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="-al-scale=1.0">
+    <link rel="stylesheet" href="../styles/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <script src="../js/bootstrap.min.js"></script>
+    <title>Professor Allocation</title>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+              <a class="navbar-brand" href="/professor%3Dallocation//index.html">Professor Allocation</a>
+              <button 
+                class="navbar-toggler" 
+                type="button" 
+            >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a 
+                      class="nav-link" 
+                      href="/professor%3Dallocation/index.html">Home</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a 
+                      class="nav-link active" 
+                      aria-current="page"  
+                      href="/professor%3Dallocation/professor/index.html">Professor</a>
+                  </li>
+                  <li class="nav-item">
+                    <a 
+                      class="nav-link" 
+                      href="/professor%3Dallocation/course/index.html">Courses</a>
+                  </li>
+                  <li class="nav-item">
+                    <a 
+                      class="nav-link" 
+                      href="/professor%3Dallocation/department/index.html" >Departments</a>
+                  </li>
+                </ul>
+             </div>
+            </div>
+          </nav>
+    </header>
+
+    <main class="container mt-4">
+      <div class="card">
+        <div class="card-header">Professor</div>
+        <div class="card-body">
+          <div class="mb-3">
+            <button 
+              type="button" 
+              class="btn btn-primary" 
+              data-bs-toggle="modal" 
+              data-bs-target="#professorModal">
+              Create professor
+            </button>
+          </div>
+          <table class="table table-hover ">
+            <thead>
+              <tr class="table-secondary">
+                <th >ID</th>
+                <th >CPF</th>
+                <th >Name</th>
+                <th >Department</th>
+                <th >Actions</th>
+              </tr>
+            </thead>
+            <tbody id="table-body" class="table-group-divider">
+              
+            </tbody>
+          </table>
+
+
+<!-- Modal -->
+<div class="modal fade" id="professorModal" tabindex="-1" aria-labelledby="professorModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="professorModalLabel">Create a new professor</h1>
+        <button 
+          type="button" 
+          class="btn-close" 
+          data-bs-dismiss="modal" 
+          aria-label="Close">
+        </button>
+      </div>
+
+      <div id="modal-alert"></div>
+
+      <form>
+      <div class="modal-body">
+          <div class="mb-3">
+            <label 
+              for="name" 
+              class="form-label">Name
+            </label>
+            <input 
+              required
+              type="text" 
+              class="form-control" 
+              id="name" 
+              placeholder="Insert the professor's full name">
+          </div>
+
+          <div class="mb-3">
+            <label 
+              for="cpf" 
+              class="form-label">CPF
+            </label>
+            <input 
+              type="text" 
+              class="form-control" 
+              id="cpf" 
+              placeholder="000.000.000-00">
+          </div>
+
+          <div class="mb-3">
+            <label 
+              for="department" 
+              class="form-label">Department
+            </label>
+            <select 
+              type="text" 
+              class="form-control" 
+              id="department">
+            </select>
+          </div>
+          <div class="modal-footer">
+            <button 
+              type="button" 
+              class="btn btn-secondary" 
+              data-bs-dismiss="modal">
+              Close
+            </button>
+            <button  
+              class="btn btn-primary" 
+              type="submit" 
+              onclick="createProfessor(event)">
+              Save changes
+            </button>
+          </div>
+
+        </form>
+
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+          
+
+        </div>
+      </div>
+
+      
+
+    </main>
+    <script src="index.js"></script>
+</body>
+</html> 
